@@ -1,6 +1,6 @@
 # My Changes to the Template
 
-I updated the scraper in script.py to scrape the article previews of articles on the home page of The Daily Pennsylvanian website. In order to do this, I updated the scrape_data_point() function to specifically look for 'div's with the class "article-preview" and extract the text from the '<p>' tag inside the 'div'. This change allows me to recieve a quick summary of the articles on the home page without having to read the full piece, which is particularly useful for creating a daily digest.  
+I updated the scraper in script.py to scrape the article previews of articles on the home page of The Daily Pennsylvanian website. In order to do this, I updated the scrape_data_point() function to specifically look for 'div's with the class "article-preview" and extract the text from the paragraph tag inside the 'div'. This change allows me to recieve a quick summary of the articles on the home page without having to read the full piece, which is particularly useful for creating a daily digest.  
 
 # Basic Git Scraper Template
 
