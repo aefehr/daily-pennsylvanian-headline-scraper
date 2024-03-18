@@ -1,6 +1,8 @@
-# Basic Git Scraper Template
+# My Changes to the Template
 
-I updated script.py to scrape the article previews of articles on the homepage. 
+I updated the scraper in script.py to scrape the article previews of articles on the home page of The Daily Pennsylvanian website. In order to do this, I updated the scrape_data_point() function to specifically look for 'div's with the class "article-preview" and extract the text from the '<p>' tag inside the 'div'. This change allows me to recieve a quick summary of the articles on the home page without having to read the full piece, which is particularly useful for creating a daily digest.  
+
+# Basic Git Scraper Template
 
 This template provides a starting point for **git scraping**—the technique of scraping data from websites and automatically committing it to a Git repository using workflows, [coined by Simon Willison](https://simonwillison.net/2020/Oct/9/git-scraping/).
 
