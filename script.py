@@ -28,20 +28,15 @@ def scrape_data_point():
 
     if req.ok:
         soup = bs4.BeautifulSoup(req.text, "html.parser")
-        # Find all 'div' elements with class 'article-preview'
         preview_elements = soup.find_all("div", class_="article-preview")
         
         for element in preview_elements:
-            # For each 'div', find all 'p' tags and extract their text
             paragraphs = element.find_all("p")
             for paragraph in paragraphs:
-                text = paragraph.text.strip()  # Remove any leading/trailing whitespace
-                if text:  # If the paragraph contains text, add it to our list
+                text = paragraph.text.strip()
+                if text:
                     data_points.append(text)
                     loguru.logger.info(f"Data point: {text}")
-        #target_element = soup.find("p", class_="article-preview")
-        #data_point = "" if target_element is None else target_element.text
-        #loguru.logger.info(f"Data point: {data_point}")
         return data_point
 
 
