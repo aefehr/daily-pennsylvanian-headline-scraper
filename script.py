@@ -1,6 +1,6 @@
 """
-Scrapes a headline from The Daily Pennsylvanian website and saves it to a 
-JSON file that tracks headlines over time.
+Scrapes article previews from The Daily Pennsylvanian website homepage and saves it to a 
+JSON file that tracks previews over time.
 """
 
 import os
@@ -15,10 +15,10 @@ import loguru
 
 def scrape_data_point():
     """
-    Scrapes the main headline from The Daily Pennsylvanian home page.
+    Scrapes the article previews The Daily Pennsylvanian home page.
 
     Returns:
-        str: The headline text if found, otherwise an empty string.
+        list: The article previews if found, otherwise an empty list.
     """
     req = requests.get("https://www.thedp.com")
     loguru.logger.info(f"Request URL: {req.url}")
@@ -37,7 +37,7 @@ def scrape_data_point():
                 if text:
                     data_points.append(text)
                     loguru.logger.info(f"Data point: {text}")
-        return data_point
+        return data_points
 
 
 if __name__ == "__main__":
