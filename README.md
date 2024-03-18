@@ -1,5 +1,7 @@
 # Basic Git Scraper Template
 
+I updated script.py to scrape the article previews of articles on the homepage. 
+
 This template provides a starting point for **git scraping**—the technique of scraping data from websites and automatically committing it to a Git repository using workflows, [coined by Simon Willison](https://simonwillison.net/2020/Oct/9/git-scraping/).
 
 Git scraping helps create an audit trail capturing snapshots of data over time. It leverages Git's version control and a continuous integration's scheduling capabilities to regularly scrape sites and save data without needing to manage servers.
